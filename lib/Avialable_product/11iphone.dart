@@ -116,7 +116,20 @@ class Iphone_11 extends StatelessWidget {
                   bottomRight: Radius.circular(50),
                 )),
           ),
-         
+          Positioned(
+            top: 170,
+            left: 8,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Hero(
+                  tag: "Kumar",
+                  child: Image.network(
+                    "https://assets-prd.ignimgs.com/2022/06/17/applemacbookprom2-1655488149423.jpg",
+                    fit: BoxFit.cover,
+                    scale: 3.2,
+                  )),
+            ),
+          ),
         ],
       ),
     ));
