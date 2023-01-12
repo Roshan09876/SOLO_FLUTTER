@@ -108,7 +108,13 @@ class Iphone_12 extends StatelessWidget {
                 ],
               ),
             ),
-          
+            height: 280,
+            decoration: BoxDecoration(
+                color: Color(0xff123456),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(50),
+                )),
           ),
          
         ],
