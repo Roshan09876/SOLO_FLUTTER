@@ -116,7 +116,24 @@ class Iphone_12 extends StatelessWidget {
                   bottomRight: Radius.circular(50),
                 )),
           ),
-         
+          Positioned(
+            top: 130,
+            left: 60,
+            child: Container(
+              height: 300,
+              width: 300,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: Hero(
+                  tag: "lol",
+                  child: Image.asset(
+                    "assets/images/Ipad.jpg",
+                    scale: 1.1,
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     ));
