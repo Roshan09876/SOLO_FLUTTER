@@ -116,7 +116,24 @@ class Iphone_11pro extends StatelessWidget {
                   bottomRight: Radius.circular(50),
                 )),
           ),
-         
+          Positioned(
+            top: 170,
+            left: 32,
+            child: Container(
+              height: 250,
+              width: 350,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Hero(
+                    tag: "Rohit",
+                    child: Image.network(
+                      "https://www.reviewgeek.com/p/uploads/2022/09/6084e6fc.jpg?height=200p&trim=2,2,2,2&crop=16:9",
+                      fit: BoxFit.cover,
+                      scale: 4,
+                    )),
+              ),
+            ),
+          ),
         ],
       ),
     ));
