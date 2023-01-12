@@ -42,7 +42,7 @@ class Iphone_11pro extends StatelessWidget {
                           width: 20,
                         ),
                         Text(
-                          " Exterme high quality sound \n without any delay"
+                          " Exterme high quality \n sound  without any delay"
                               .toUpperCase(),
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 20),
