@@ -118,7 +118,7 @@ class MyDrawer extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => password()));
                 },
                 child: Text(
-                  "Change your Password",
+                  "Change  Password",
                   style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
@@ -142,7 +142,7 @@ class MyDrawer extends StatelessWidget {
                       context, MaterialPageRoute(builder: (context) => wow()));
                 },
                 child: Text(
-                  "Verify You E-mail",
+                  "Email Verify",
                   style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
