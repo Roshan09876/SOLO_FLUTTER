@@ -123,7 +123,20 @@ class _Iphone_14State extends State<Iphone_14> {
                   bottomRight: Radius.circular(50),
                 )),
           ),
-         
+          Positioned(
+            top: 170,
+            left: 6,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Hero(
+                tag: "Roshan",
+                child: Image.asset(
+                  "assets/images/14-ip.jpg",
+                  scale: 1.65,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     ));
