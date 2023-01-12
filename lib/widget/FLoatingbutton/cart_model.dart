@@ -1,43 +1,43 @@
-// class Cart {
-//   late final int? id;
-//   final String? productId;
-//   final String? productName;
-//   final int? initialPrice;
-//   final int? productPrice;
-//   final int? quantity;
-//   final String? unitTag;
-//   final String? image;
+class Cart {
+  late final int? id;
+  final String? productId;
+  final String? productName;
+  final int? initialPrice;
+  final int? productPrice;
+  final int? quantity;
+  final String? unitTag;
+  final String? image;
 
-//   Cart({
-//     required this.id,
-//     required this.productId,
-//     required this.productName,
-//     required this.initialPrice,
-//     required this.productPrice,
-//     required this.quantity,
-//     required this.unitTag,
-//     required this.image,
-//   });
-//   Cart.fromMap(Map<dynamic, dynamic> res)
-//       : id = res["id"],
-//         productId = res["productId"],
-//         productName = res["productName"],
-//         initialPrice = res["initialPrice"],
-//         productPrice = res["productPrice"],
-//         quantity = res["quantity"],
-//         unitTag = res["unitTag"],
-//         image = res["image"];
+  Cart({
+    required this.id,
+    required this.productId,
+    required this.productName,
+    required this.initialPrice,
+    required this.productPrice,
+    required this.quantity,
+    required this.unitTag,
+    required this.image,
+  });
+  Cart.fromMap(Map<dynamic, dynamic> res)
+      : id = res["id"],
+        productId = res["productId"],
+        productName = res["productName"],
+        initialPrice = res["initialPrice"],
+        productPrice = res["productPrice"],
+        quantity = res["quantity"],
+        unitTag = res["unitTag"],
+        image = res["image"];
 
-//   Map<String, String> toMap() {
-//     return {
-//       'id': id.toString(),
-//       'productId': productId.toString(),
-//       'productName': productName.toString(),
-//       'initialPrice': initialPrice.toString(),
-//       'productPrice': productPrice.toString(),
-//       'quantity': quantity.toString(),
-//       'unitTag': unitTag.toString(),
-//       'image': image.toString(),
-//     };
-//   }
-// }
+  Map<String, String> toMap() {
+    return {
+      'id': id.toString(),
+      'productId': productId.toString(),
+      'productName': productName.toString(),
+      'initialPrice': initialPrice.toString(),
+      'productPrice': productPrice.toString(),
+      'quantity': quantity.toString(),
+      'unitTag': unitTag.toString(),
+      'image': image.toString(),
+    };
+  }
+}
