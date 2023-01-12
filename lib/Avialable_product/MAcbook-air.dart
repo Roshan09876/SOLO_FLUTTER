@@ -115,7 +115,20 @@ class Iphone_13 extends StatelessWidget {
                   bottomRight: Radius.circular(50),
                 )),
           ),
-         
+          Positioned(
+            top: 170,
+            left: 8,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Hero(
+                tag: "wow",
+                child: Image.asset(
+                  "assets/images/mac-2-pro.jpg",
+                  scale: 6.8,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     ));
