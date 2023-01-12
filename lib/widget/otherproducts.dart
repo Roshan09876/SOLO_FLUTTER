@@ -65,7 +65,7 @@ class Other_products extends StatelessWidget {
                 children: [
                   Container(
                     alignment: Alignment.center,
-                    width: 120,
+                    width: 130,
                     height: 30,
                     decoration: BoxDecoration(
                         color: Color(0xff123456),
@@ -79,7 +79,7 @@ class Other_products extends StatelessWidget {
                             topLeft: Radius.circular(10),
                             topRight: Radius.circular(10))),
                     child: Text(
-                      "Laptops".toUpperCase(),
+                      "L a p t o p s".toUpperCase(),
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,

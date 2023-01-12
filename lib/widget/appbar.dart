@@ -74,15 +74,17 @@ class MyAppBar extends StatelessWidget {
                           color: Color.fromARGB(255, 18, 5, 69),
                           size: 30,
                         ),
-                        Expanded(
-                          child: TextField(
-                            decoration: InputDecoration(
-                                hintText: "Search",
-                                hintStyle: TextStyle(
-                                    color: Color(0xff123456),
-                                    fontWeight: FontWeight.bold),
-                                enabledBorder: InputBorder.none,
-                                focusedBorder: InputBorder.none),
+                        Container(
+                          child: Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  hintText: "Search",
+                                  hintStyle: TextStyle(
+                                      color: Color(0xff123456),
+                                      fontWeight: FontWeight.bold),
+                                  enabledBorder: InputBorder.none,
+                                  focusedBorder: InputBorder.none),
+                            ),
                           ),
                         ),
                         Material(
@@ -115,9 +117,9 @@ class MyAppBar extends StatelessWidget {
                       Text(
                         "Only Images of Available Products",
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            color: Color.fromARGB(255, 0, 0, 0)),
                       )
                     ]),
                   ),
@@ -157,6 +159,7 @@ class MyAppBar extends StatelessWidget {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
+                          color: Color.fromARGB(255, 0, 0, 0),
                         ),
                       )
                     ]),
