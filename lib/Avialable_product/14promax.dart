@@ -115,7 +115,13 @@ class _Iphone_14State extends State<Iphone_14> {
                 ],
               ),
             ),
-            
+            height: 280,
+            decoration: BoxDecoration(
+                color: Color(0xff123456),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(50),
+                )),
           ),
          
         ],
