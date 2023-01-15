@@ -13,15 +13,7 @@ class wow extends StatefulWidget {
 class _wowState extends State<wow> {
   User? user = FirebaseAuth.instance.currentUser;
   verifyEmail() async {
-    if (user != null && user!.emailVerified) {
-      await user!.sendEmailVerification();
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          backgroundColor: Colors.deepOrange,
-          content: Text(
-            "Varification Email has been sent",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-          )));
-    }
+    if (user != null && user!.emailVerified) {}
   }
 
   @override
@@ -79,7 +71,7 @@ class _wowState extends State<wow> {
               user!.emailVerified
                   ? Text("Account Verified")
                   : TextButton(
-                      onPressed: (() => {verifyEmail()}),
+                      onPressed: (() => {}),
                       child: Text(
                         "Verify Email",
                         style: TextStyle(
