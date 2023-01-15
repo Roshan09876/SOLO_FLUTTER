@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_mobile/pages/profile.dart';
 
 class Navigation extends StatelessWidget {
   const Navigation({
@@ -50,9 +51,12 @@ class Navigation extends StatelessWidget {
                 width: 240,
               ),
               InkWell(
-                onTap: (() {}),
+                onTap: (() {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => wow()));
+                }),
                 child: Icon(
-                  Icons.emoji_emotions,
+                  Icons.person,
                   color: Colors.white,
                   size: 30,
                 ),
