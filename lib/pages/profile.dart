@@ -11,10 +11,6 @@ class wow extends StatefulWidget {
 }
 
 class _wowState extends State<wow> {
-  final uid = FirebaseAuth.instance.currentUser!.uid;
-  final email = FirebaseAuth.instance.currentUser!.email;
-  final creationTime = FirebaseAuth.instance.currentUser!.metadata.creationTime;
-
   User? user = FirebaseAuth.instance.currentUser;
   verifyEmail() async {
     if (user != null && user!.emailVerified) {
@@ -47,7 +43,7 @@ class _wowState extends State<wow> {
             padding: const EdgeInsets.only(top: 450.0),
             child: Column(children: [
               Text(
-                "User Id:- $uid",
+                "User Id:- ",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -68,7 +64,7 @@ class _wowState extends State<wow> {
                       ),
                     ),
                     Text(
-                      "$email",
+                      "",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -106,7 +102,7 @@ class _wowState extends State<wow> {
                       ),
                     ),
                     Text(
-                      "$creationTime",
+                      "",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,

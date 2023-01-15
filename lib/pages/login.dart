@@ -119,12 +119,11 @@ class _loginState extends State<login> {
                       padding: const EdgeInsets.only(left: 40, right: 70),
                       child: TextFormField(
                         decoration: InputDecoration(
-                            hintText: "Enter your username",
-                            labelText: "Username"),
+                            hintText: "Enter your email", labelText: "Email"),
                         controller: emailController,
                         validator: (value) {
                           if (value!.isEmpty) {
-                            return "Username is required";
+                            return "Email is required";
                           } else if (!value.contains("@")) {
                             return "Please Enter valid email (@) missing";
                           } else {
