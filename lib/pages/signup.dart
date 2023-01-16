@@ -85,7 +85,7 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Create an Account"),
-        backgroundColor: Color(0xfff123456),
+        backgroundColor: Color.fromARGB(255, 20, 101, 183),
       ),
       body: SingleChildScrollView(
         child: Stack(
@@ -94,8 +94,8 @@ class _SignUpState extends State<SignUp> {
               height: 1000,
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
-                  Color.fromARGB(255, 76, 35, 187),
-                  Color.fromARGB(173, 32, 209, 215)
+                  Color.fromARGB(255, 72, 192, 194),
+                  Color.fromARGB(172, 68, 117, 119)
                 ], begin: Alignment.topRight, end: Alignment.bottomLeft),
               ),
             ),
@@ -106,6 +106,7 @@ class _SignUpState extends State<SignUp> {
                 margin: EdgeInsets.only(left: 30, top: 180, bottom: 390),
                 decoration: BoxDecoration(
                     color: Colors.white,
+                    border: Border.all(width: 1, color: Colors.blue),
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(60),
                         bottomLeft: Radius.circular(60))),
