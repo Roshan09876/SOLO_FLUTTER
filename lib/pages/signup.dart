@@ -76,6 +76,10 @@ class _SignUpState extends State<SignUp> {
     }
   }
 
+  void _loginWithFacebook() async{
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -283,7 +287,9 @@ class _SignUpState extends State<SignUp> {
                       Material(
                         child: InkWell(
                           splashColor: Colors.blue,
-                          onTap: () {},
+                          onTap: () {
+                            _loginWithFacebook();
+                          },
                           child: Container(
                             height: 60,
                             margin: EdgeInsets.only(left: 20, top: 14),
