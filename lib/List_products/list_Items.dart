@@ -17,6 +17,7 @@ class list_laptop extends StatefulWidget {
 
 class _list_laptopState extends State<list_laptop> {
   DBHelper? dbHelper = DBHelper();
+  bool added = false;
   List<String> productName = [
     "Iphone 14 pro max",
     "Iphone 13 pro max",
@@ -81,7 +82,6 @@ class _list_laptopState extends State<list_laptop> {
 
   @override
   Widget build(BuildContext context) {
-    bool added = true;
     // ignore: unused_local_variable
     // final cart = Provider.of<CartProvider>(context);
 
@@ -191,76 +191,80 @@ class _list_laptopState extends State<list_laptop> {
                                         Align(
                                           alignment: Alignment.bottomRight,
                                           child: ElevatedButton(
-                                            style: ElevatedButton.styleFrom(
-                                                shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            22)),
-                                                minimumSize: Size(100, 30),
-                                                backgroundColor:
-                                                    Color(0xff123456)),
-                                            onPressed: () {
-                                              print(index);
-                                              print(index);
-                                              print(productName[index]
-                                                  .toString());
-                                              print(productPrice[index]
-                                                  .toString());
-                                              print(productPrice[index]);
-                                              print(1);
-                                              print(productUnit[index]
-                                                  .toString());
+                                              style: ElevatedButton.styleFrom(
+                                                  shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              22)),
+                                                  minimumSize: Size(100, 30),
+                                                  backgroundColor:
+                                                      Color(0xff123456)),
+                                              onPressed: () {
+                                                print(index);
+                                                print(index);
+                                                print(productName[index]
+                                                    .toString());
+                                                print(productPrice[index]
+                                                    .toString());
+                                                print(productPrice[index]);
+                                                print(1);
+                                                print(productUnit[index]
+                                                    .toString());
 
-                                              print(productImage[index]
-                                                  .toString());
+                                                print(productImage[index]
+                                                    .toString());
 
-                                              dbHelper!
-                                                  .insert(CartModel.Cart(
-                                                      id: index,
-                                                      productId:
-                                                          index.toString(),
-                                                      productName:
-                                                          productName[index]
-                                                              .toString(),
-                                                      initialPrice:
-                                                          productPrice[index],
-                                                      productPrice:
-                                                          productPrice[index],
-                                                      quantity: 1,
-                                                      unitTag:
-                                                          productUnit[index]
-                                                              .toString(),
-                                                      image: productImage[index]
-                                                          .toString()))
-                                                  .then((value) {
-                                                print(
-                                                    "Product is added to cart");
+                                                dbHelper!
+                                                    .insert(CartModel.Cart(
+                                                        id: index,
+                                                        productId:
+                                                            index.toString(),
+                                                        productName:
+                                                            productName[index]
+                                                                .toString(),
+                                                        initialPrice:
+                                                            productPrice[index],
+                                                        productPrice:
+                                                            productPrice[index],
+                                                        quantity: 1,
+                                                        unitTag:
+                                                            productUnit[index]
+                                                                .toString(),
+                                                        image:
+                                                            productImage[index]
+                                                                .toString()))
+                                                    .then((value) {
+                                                  print(
+                                                      "Product is added to cart");
 
-                                                cart.addCounter();
-                                                cart.addTotalPrice(double.parse(
-                                                    productPrice[index]
-                                                        .toString()));
-                                              }).onError((error, stackTrace) {
-                                                print(error.toString());
-                                              });
-                                              ScaffoldMessenger.of(context)
-                                                  .showSnackBar(SnackBar(
-                                                      backgroundColor:
-                                                          Colors.blue,
-                                                      content: Text(
-                                                        "Item added to Cart",
-                                                        style: TextStyle(
-                                                            fontSize: 19),
-                                                      )));
-                                              setState(() {
-                                                added = !added;
-                                              });
-                                            },
-                                            child: Text("Add to cart",
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 14)),
-                                          ),
+                                                  cart.addCounter();
+                                                  cart.addTotalPrice(
+                                                      double.parse(
+                                                          productPrice[index]
+                                                              .toString()));
+                                                }).onError((error, stackTrace) {
+                                                  print(error.toString());
+                                                });
+                                                ScaffoldMessenger.of(context)
+                                                    .showSnackBar(SnackBar(
+                                                        backgroundColor:
+                                                            Colors.blue,
+                                                        content: Text(
+                                                          "Item added to Cart",
+                                                          style: TextStyle(
+                                                              fontSize: 19),
+                                                        )));
+                                                setState(() {
+                                                  added = added;
+                                                });
+                                              },
+                                              child: added
+                                                  ? Icon(Icons.abc)
+                                                  : Text("Add to cart",
+                                                      style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          fontSize: 14))),
                                         )
                                       ],
                                     ),
