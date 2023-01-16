@@ -279,6 +279,38 @@ class _SignUpState extends State<SignUp> {
                             ],
                           ),
                         ),
+                      ),
+                      Material(
+                        child: InkWell(
+                          splashColor: Colors.blue,
+                          onTap: () {},
+                          child: Container(
+                            height: 60,
+                            margin: EdgeInsets.only(left: 20, top: 14),
+                            decoration: BoxDecoration(
+                                border: Border.all(width: 2, color: Colors.red),
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Container(
+                              margin: EdgeInsets.only(left: 30),
+                              child: Row(
+                                children: [
+                                  CircleAvatar(
+                                    backgroundImage: NetworkImage(
+                                        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png"),
+                                    radius: 24,
+                                  ),
+                                  SizedBox(
+                                    width: 12,
+                                  ),
+                                  Text(
+                                    "Log in with Facebook",
+                                    style: TextStyle(fontSize: 18),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
                       )
                     ]),
                   ),
