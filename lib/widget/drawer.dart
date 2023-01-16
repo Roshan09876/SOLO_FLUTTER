@@ -91,7 +91,7 @@ class MyDrawer extends StatelessWidget {
                 splashColor: Colors.blue,
                 onTap: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => wow()));
+                      context, MaterialPageRoute(builder:(context) => wow()));
                 },
                 child: Text(
                   "Profile",
