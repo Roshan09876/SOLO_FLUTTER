@@ -96,7 +96,7 @@ class _list_laptopState extends State<list_laptop> {
                           id: null,
                         )));
           },
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Color(0xfff123456),
           child: Badge(
             badgeContent: Consumer<CartProvider>(
               builder: (context, value, child) {
