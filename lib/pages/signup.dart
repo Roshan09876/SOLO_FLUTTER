@@ -247,8 +247,19 @@ class _SignUpState extends State<SignUp> {
                               fontWeight: FontWeight.bold, fontSize: 20),
                         ),
                       ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            minimumSize: Size(280, 32),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18))),
+                        onPressed: () {},
+                        child: Text(
+                          "Phone Sign is",
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ),
                       SizedBox(
-                        height: 6,
+                        height: 8,
                       ),
                       Material(
                         borderRadius: BorderRadius.circular(50),

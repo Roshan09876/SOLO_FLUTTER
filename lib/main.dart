@@ -42,7 +42,6 @@ class _AppleState extends State<Apple> {
           theme: MyTheme.lightTheme(context),
           darkTheme: MyTheme.darkTheme(context),
         );
-        
       }),
     );
   }
