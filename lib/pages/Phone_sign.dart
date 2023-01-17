@@ -20,7 +20,27 @@ class _PhoneState extends State<Phone> {
               Color.fromARGB(172, 68, 117, 119)
             ], begin: Alignment.topRight, end: Alignment.bottomLeft),
           ),
-          child: Column(children: [])),
+          child: Column(children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 40, right: 40, top: 190),
+              child: TextFormField(
+                  decoration: InputDecoration(
+                hintText: "Phone Number",
+                labelText: 'Enter your Phone Number',
+                enabledBorder: OutlineInputBorder(),
+                focusedBorder: OutlineInputBorder(),
+              )),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  "Send OTP",
+                  style: TextStyle(fontSize: 19, color: Colors.black),
+                ))
+          ])),
     );
   }
 }
