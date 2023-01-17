@@ -27,6 +27,7 @@ class _PhoneState extends State<Phone> {
             Padding(
               padding: const EdgeInsets.only(left: 200, top: 20),
               child: CircleAvatar(
+                backgroundImage: AssetImage("assets/images/apple.avif"),
                 radius: 70,
               ),
             ),
