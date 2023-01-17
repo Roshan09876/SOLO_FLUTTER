@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class Phone extends StatefulWidget {
@@ -8,6 +10,11 @@ class Phone extends StatefulWidget {
 }
 
 class _PhoneState extends State<Phone> {
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController otpController = TextEditingController();
+
+  FirebaseAuth auth = FirebaseAuth.instance;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,5 +74,14 @@ class _PhoneState extends State<Phone> {
     );
   }
 
-  void verifyNumber() {}
+  void verifyNumber() {
+
+    auth.verifyPhoneNumber(
+      verificationCompleted: verificationCompleted,
+       verificationFailed: verificationFailed,
+        codeSent: codeSent,
+         codeAutoRetrievalTimeout: codeAutoRetrievalTimeout)
+
+
+  }
 }
