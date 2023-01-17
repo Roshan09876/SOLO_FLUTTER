@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:online_mobile/pages/Phone_sign.dart';
 import 'package:online_mobile/pages/login.dart';
 
 class SignUp extends StatefulWidget {
@@ -252,7 +253,10 @@ class _SignUpState extends State<SignUp> {
                             minimumSize: Size(280, 32),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18))),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Phone()));
+                        },
                         child: Text(
                           "Phone Sign is",
                           style: TextStyle(fontSize: 16),
