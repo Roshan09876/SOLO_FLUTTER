@@ -313,7 +313,7 @@ class ReusableWidget extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              NotificationService.display("This is title", "This is body",
+              NotificationService.display("Successfully", "We take you Order",
                   "This is Extra data", context);
             },
             style: ElevatedButton.styleFrom(
