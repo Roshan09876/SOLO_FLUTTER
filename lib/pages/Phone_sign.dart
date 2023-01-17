@@ -11,13 +11,16 @@ class _PhoneState extends State<Phone> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          backgroundColor: Color(0xff123456), title: Text("Phone Number OTP")),
       body: Container(
           height: 1000,
           width: 2000,
           decoration: BoxDecoration(
+            // color: Color.fromARGB(26, 134, 125, 125),
             gradient: LinearGradient(colors: [
-              Color.fromARGB(255, 72, 192, 194),
-              Color.fromARGB(172, 68, 117, 119)
+              Color.fromARGB(255, 113, 244, 246),
+              Color.fromARGB(172, 187, 221, 222)
             ], begin: Alignment.topRight, end: Alignment.bottomLeft),
           ),
           child: Column(children: [
@@ -35,6 +38,7 @@ class _PhoneState extends State<Phone> {
               height: 8,
             ),
             ElevatedButton(
+                style: ElevatedButton.styleFrom(minimumSize: Size(220, 35)),
                 onPressed: () {},
                 child: Text(
                   "Send OTP",
