@@ -25,7 +25,13 @@ class _PhoneState extends State<Phone> {
           ),
           child: Column(children: [
             Padding(
-              padding: const EdgeInsets.only(left: 40, right: 40, top: 190),
+              padding: const EdgeInsets.only(left: 200, top: 20),
+              child: CircleAvatar(
+                radius: 70,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 40, right: 40, top: 60),
               child: TextFormField(
                   decoration: InputDecoration(
                 hintText: "Phone Number",
