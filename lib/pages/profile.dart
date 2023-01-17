@@ -192,7 +192,8 @@ class _wowState extends State<wow> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     )),
-                onPressed: () => {
+                onPressed: () async => {
+                      await FirebaseAuth.instance.signOut(),
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => login()))
                     },
