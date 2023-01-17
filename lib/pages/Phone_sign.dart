@@ -76,7 +76,7 @@ class _PhoneState extends State<Phone> {
                   verifyNumber();
                 },
                 child: Text(
-                  "Send OTP",
+                  otpCodeVisible ? "Log-In" : "Verify",
                   style: TextStyle(fontSize: 19, color: Colors.black),
                 ))
           ])),
