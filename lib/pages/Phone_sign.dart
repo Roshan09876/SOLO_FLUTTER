@@ -75,13 +75,11 @@ class _PhoneState extends State<Phone> {
   }
 
   void verifyNumber() {
-
     auth.verifyPhoneNumber(
-      verificationCompleted: verificationCompleted,
-       verificationFailed: verificationFailed,
-        codeSent: codeSent,
-         codeAutoRetrievalTimeout: codeAutoRetrievalTimeout)
-
-
+        phoneNumber: phoneController.text,
+        verificationCompleted: (PhoneAuthCredential credential) {},
+        verificationFailed: (FirebaseAuthException exception) {},
+        codeSent: (String verificationID, int? resendToken) {},
+        codeAutoRetrievalTimeout: (String verificationId) {});
   }
 }
