@@ -17,6 +17,8 @@ class _PhoneState extends State<Phone> {
 
   String verificationIDRecieved = "";
 
+  bool otpCodeVisible = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +56,7 @@ class _PhoneState extends State<Phone> {
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40, top: 20),
               child: Visibility(
-                visible: false,
+                visible: otpCodeVisible,
                 child: TextFormField(
                     controller: otpController,
                     decoration: InputDecoration(
@@ -94,6 +96,7 @@ class _PhoneState extends State<Phone> {
         },
         codeSent: (String verificationID, int? resendToken) {
           verificationIDRecieved = verificationID;
+          otpCodeVisible = true;
           setState(() {});
         },
         codeAutoRetrievalTimeout: (String verificationId) {});
