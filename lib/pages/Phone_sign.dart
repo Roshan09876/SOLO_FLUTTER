@@ -41,12 +41,24 @@ class _PhoneState extends State<Phone> {
                 focusedBorder: OutlineInputBorder(),
               )),
             ),
+            Padding(
+              padding: const EdgeInsets.only(left: 40, right: 40, top: 20),
+              child: TextFormField(
+                  decoration: InputDecoration(
+                hintText: "OTP",
+                labelText: 'Enter your OTP code',
+                enabledBorder: OutlineInputBorder(),
+                focusedBorder: OutlineInputBorder(),
+              )),
+            ),
             SizedBox(
               height: 8,
             ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(minimumSize: Size(220, 35)),
-                onPressed: () {},
+                onPressed: () {
+                  verifyNumber();
+                },
                 child: Text(
                   "Send OTP",
                   style: TextStyle(fontSize: 19, color: Colors.black),
@@ -54,4 +66,6 @@ class _PhoneState extends State<Phone> {
           ])),
     );
   }
+
+  void verifyNumber() {}
 }
