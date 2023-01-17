@@ -4,6 +4,8 @@ import 'package:online_mobile/widget/FLoatingbutton/cart_provider.dart';
 import 'package:online_mobile/widget/FLoatingbutton/db_helper.dart';
 import 'package:provider/provider.dart';
 
+import '../../services/notification_service.dart';
+
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key, required id});
 
@@ -310,7 +312,10 @@ class ReusableWidget extends StatelessWidget {
             height: 8,
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              NotificationService.display("This is title", "This is body",
+                  "This is Extra data", context);
+            },
             style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xfff123456),
                 padding: EdgeInsets.all(10),
