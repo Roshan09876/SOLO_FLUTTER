@@ -15,6 +15,8 @@ class _PhoneState extends State<Phone> {
 
   FirebaseAuth auth = FirebaseAuth.instance;
 
+  String verificationIDRecieved = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,22 +43,27 @@ class _PhoneState extends State<Phone> {
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40, top: 60),
               child: TextFormField(
+                  controller: phoneController,
                   decoration: InputDecoration(
-                hintText: "Phone Number",
-                labelText: 'Enter your Phone Number',
-                enabledBorder: OutlineInputBorder(),
-                focusedBorder: OutlineInputBorder(),
-              )),
+                    hintText: "Phone Number",
+                    labelText: 'Enter your Phone Number',
+                    enabledBorder: OutlineInputBorder(),
+                    focusedBorder: OutlineInputBorder(),
+                  )),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40, top: 20),
-              child: TextFormField(
-                  decoration: InputDecoration(
-                hintText: "OTP",
-                labelText: 'Enter your OTP code',
-                enabledBorder: OutlineInputBorder(),
-                focusedBorder: OutlineInputBorder(),
-              )),
+              child: Visibility(
+                visible: false,
+                child: TextFormField(
+                    controller: otpController,
+                    decoration: InputDecoration(
+                      hintText: "OTP",
+                      labelText: 'Enter your OTP code',
+                      enabledBorder: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(),
+                    )),
+              ),
             ),
             SizedBox(
               height: 8,
@@ -85,7 +92,10 @@ class _PhoneState extends State<Phone> {
         verificationFailed: (FirebaseAuthException exception) {
           print(exception.message);
         },
-        codeSent: (String verificationID, int? resendToken) {},
+        codeSent: (String verificationID, int? resendToken) {
+          verificationIDRecieved = verificationID;
+          setState(() {});
+        },
         codeAutoRetrievalTimeout: (String verificationId) {});
   }
 }
