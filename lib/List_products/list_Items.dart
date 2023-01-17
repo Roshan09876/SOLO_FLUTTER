@@ -6,6 +6,8 @@ import 'package:online_mobile/widget/FLoatingbutton/cart_model.dart'
 import 'package:online_mobile/widget/FLoatingbutton/cart_provider.dart';
 import 'package:online_mobile/widget/FLoatingbutton/db_helper.dart';
 import 'package:provider/provider.dart';
+
+import '../services/notification_service.dart';
 // import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class list_laptop extends StatefulWidget {
@@ -200,6 +202,11 @@ class _list_laptopState extends State<list_laptop> {
                                                   backgroundColor:
                                                       Color(0xff123456)),
                                               onPressed: () {
+                                                NotificationService.display(
+                                                    "Succefully",
+                                                    "Item Added to Cart",
+                                                    "This is Extra data",
+                                                    context);
                                                 print(index);
                                                 print(index);
                                                 print(productName[index]
@@ -250,7 +257,7 @@ class _list_laptopState extends State<list_laptop> {
                                                         backgroundColor:
                                                             Colors.blue,
                                                         content: Text(
-                                                          "Item added to Cart",
+                                                          "added to Cart",
                                                           style: TextStyle(
                                                               fontSize: 19),
                                                         )));
