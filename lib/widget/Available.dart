@@ -32,6 +32,11 @@ class Recomended extends StatelessWidget {
                   Hero(
                       tag: "Roshan",
                       child: Container(
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 167, 198, 228),
+                              boxShadow: [
+                                BoxShadow(blurRadius: 25, offset: Offset(5, 16))
+                              ]),
                           height: 120,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(12),
