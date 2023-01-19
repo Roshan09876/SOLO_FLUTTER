@@ -92,7 +92,12 @@ class Recomended extends StatelessWidget {
             ),
             Container(
               // margin: EdgeInsets.only(left: 20, top: 40, bottom: 20 * 2.5),
-              width: 150,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 219, 228, 238),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [BoxShadow(blurRadius: 25, offset: Offset(5, 5))]),
+              width: 140,
+
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
