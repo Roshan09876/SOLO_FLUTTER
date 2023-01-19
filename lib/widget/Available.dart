@@ -107,12 +107,12 @@ class Recomended extends StatelessWidget {
                   Container(
                     height: 130,
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(5),
                       child: Hero(
                         tag: "wow",
                         child: Image.asset(
                           "assets/images/mac-2-pro.jpg",
-                          // fit: BoxFit.fill,
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
