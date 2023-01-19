@@ -145,6 +145,9 @@ class MyAppBar extends StatelessWidget {
             ),
           ),
           Recomended(),
+          SizedBox(
+            height: 15,
+          ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
