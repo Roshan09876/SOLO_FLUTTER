@@ -45,13 +45,15 @@ class _PhoneState extends State<Phone> {
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40, top: 60),
               child: TextFormField(
-                  controller: phoneController,
-                  decoration: InputDecoration(
-                    hintText: "Phone Number",
-                    labelText: 'Enter your Phone Number',
-                    enabledBorder: OutlineInputBorder(),
-                    focusedBorder: OutlineInputBorder(),
-                  )),
+                controller: phoneController,
+                decoration: InputDecoration(
+                  hintText: "Phone Number",
+                  labelText: 'Enter your Phone Number',
+                  enabledBorder: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(),
+                ),
+                keyboardType: TextInputType.phone,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40, right: 40, top: 20),
@@ -73,7 +75,11 @@ class _PhoneState extends State<Phone> {
             ElevatedButton(
                 style: ElevatedButton.styleFrom(minimumSize: Size(220, 35)),
                 onPressed: () {
-                  verifyNumber();
+                  if (otpCodeVisible) {
+                    verfyCode();
+                  } else {
+                    verifyNumber();
+                  }
                 },
                 child: Text(
                   otpCodeVisible ? "Log-In" : "Verify",
@@ -100,5 +106,13 @@ class _PhoneState extends State<Phone> {
           setState(() {});
         },
         codeAutoRetrievalTimeout: (String verificationId) {});
+  }
+
+  void verfyCode() async {
+    PhoneAuthCredential credential = PhoneAuthProvider.credential(
+        verificationId: verificationIDRecieved, smsCode: otpController.text);
+    await auth.signInWithCredential(credential).then((value) {
+      print("You are logged in Succesfully");
+    });
   }
 }

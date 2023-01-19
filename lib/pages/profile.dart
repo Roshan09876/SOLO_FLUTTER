@@ -68,7 +68,7 @@ class _wowState extends State<wow> {
               SizedBox(
                 height: 8,
               ),
-              user!.emailVerified
+              user != null && user!.emailVerified
                   ? Text("Account Verified")
                   : TextButton(
                       onPressed: (() => {}),
