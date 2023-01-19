@@ -300,6 +300,12 @@ class Recomended extends StatelessWidget {
             ),
             Container(
               // margin: EdgeInsets.only(left: 20, top: 40, bottom: 20 * 2.5),
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 167, 198, 228),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(blurRadius: 25, offset: Offset(5, 16))
+                  ]),
               width: 120,
               child: InkWell(
                 onTap: () {
