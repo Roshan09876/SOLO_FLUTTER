@@ -248,8 +248,10 @@ class Recomended extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                         child: Hero(
                             tag: "Rohit",
-                            child:
-                                Image.asset("assets/images/airpods-pro2.jpg")),
+                            child: Image.asset(
+                              "assets/images/airpods-pro2.jpg",
+                              fit: BoxFit.cover,
+                            )),
                       )),
                   Container(
                     height: 70,
