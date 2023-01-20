@@ -32,6 +32,12 @@ class _loginState extends State<login> {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => HomePage()));
       await Future.delayed(Duration(seconds: 1));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          backgroundColor: Colors.blue,
+          content: Text(
+            "Welcome to Online Apple-Mobile Application",
+            style: TextStyle(fontSize: 20),
+          )));
     } on FirebaseAuthException catch (e) {
       if (e.code == "user-not-found") {
         print("Username is incorrect or not-found");
