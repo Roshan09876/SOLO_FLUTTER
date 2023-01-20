@@ -11,9 +11,21 @@ class wow extends StatefulWidget {
 }
 
 class _wowState extends State<wow> {
+  final uid = FirebaseAuth.instance.currentUser!.uid;
+  final email = FirebaseAuth.instance.currentUser!.email;
+  final creationTime = FirebaseAuth.instance.currentUser!.metadata.creationTime;
+
   User? user = FirebaseAuth.instance.currentUser;
   verifyEmail() async {
-    if (user != null && user!.emailVerified) {}
+    if (user != null && user!.emailVerified) {
+      await user!.sendEmailVerification();
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          backgroundColor: Colors.deepOrange,
+          content: Text(
+            "Varification Email has been sent",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          )));
+    }
   }
 
   @override
@@ -35,7 +47,7 @@ class _wowState extends State<wow> {
             padding: const EdgeInsets.only(top: 450.0),
             child: Column(children: [
               Text(
-                "User Id:- ",
+                "User Id:- $uid",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -49,14 +61,14 @@ class _wowState extends State<wow> {
                 child: Row(
                   children: [
                     Text(
-                      "Email:-  ",
+                      "Email:-  $email",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                       ),
                     ),
                     Text(
-                      "",
+                      "$email",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -71,7 +83,7 @@ class _wowState extends State<wow> {
               user != null && user!.emailVerified
                   ? Text("Account Verified")
                   : TextButton(
-                      onPressed: (() => {}),
+                      onPressed: (() => {verifyEmail()}),
                       child: Text(
                         "Verify Email",
                         style: TextStyle(
@@ -94,7 +106,7 @@ class _wowState extends State<wow> {
                       ),
                     ),
                     Text(
-                      "",
+                      "$creationTime",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
