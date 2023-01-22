@@ -12,12 +12,12 @@ class Iphone_12 extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            height: 800,
+            height: 1800,
             alignment: Alignment.bottomRight,
             color: Color(0xff123456),
           ),
           Container(
-            height: 700,
+            height: 750,
             width: 5000,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -28,7 +28,7 @@ class Iphone_12 extends StatelessWidget {
                   Color.fromARGB(172, 122, 183, 183)
                 ], begin: Alignment.centerRight, end: Alignment.centerLeft)),
             child: Padding(
-              padding: const EdgeInsets.only(top: 450),
+              padding: const EdgeInsets.only(top: 480),
               child: Column(
                 children: [
                   SizedBox(
@@ -45,7 +45,7 @@ class Iphone_12 extends StatelessWidget {
                         Text(
                           " Powerful  Apple \n M2 Chip".toUpperCase(),
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold, fontSize: 21),
                         ),
                       ],
                     ),
@@ -64,7 +64,7 @@ class Iphone_12 extends StatelessWidget {
                         Text(
                           "Launched in 2020 \n October 16".toUpperCase(),
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold, fontSize: 21),
                         ),
                       ],
                     ),
@@ -117,7 +117,7 @@ class Iphone_12 extends StatelessWidget {
                 )),
           ),
           Positioned(
-            top: 130,
+            top: 150,
             left: 60,
             child: Container(
               height: 300,
