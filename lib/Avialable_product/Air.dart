@@ -11,12 +11,12 @@ class Iphone_11pro extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            height: 800,
+            height: 1800,
             alignment: Alignment.bottomRight,
             color: Color(0xff123456),
           ),
           Container(
-            height: 700,
+            height: 750,
             width: 5000,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -27,7 +27,7 @@ class Iphone_11pro extends StatelessWidget {
                   Color.fromARGB(172, 122, 183, 183)
                 ], begin: Alignment.centerRight, end: Alignment.centerLeft)),
             child: Padding(
-              padding: const EdgeInsets.only(top: 450),
+              padding: const EdgeInsets.only(top: 470),
               child: Column(
                 children: [
                   SizedBox(
@@ -45,7 +45,7 @@ class Iphone_11pro extends StatelessWidget {
                           " Exterme high quality \n sound  without any delay"
                               .toUpperCase(),
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold, fontSize: 21),
                         ),
                       ],
                     ),
@@ -64,7 +64,7 @@ class Iphone_11pro extends StatelessWidget {
                         Text(
                           "Launched in 2019 ".toUpperCase(),
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                              fontWeight: FontWeight.bold, fontSize: 21),
                         ),
                       ],
                     ),
@@ -117,8 +117,8 @@ class Iphone_11pro extends StatelessWidget {
                 )),
           ),
           Positioned(
-            top: 170,
-            left: 32,
+            top: 190,
+            left: 40,
             child: Container(
               height: 250,
               width: 350,
@@ -129,7 +129,7 @@ class Iphone_11pro extends StatelessWidget {
                     child: Image.network(
                       "https://www.reviewgeek.com/p/uploads/2022/09/6084e6fc.jpg?height=200p&trim=2,2,2,2&crop=16:9",
                       fit: BoxFit.cover,
-                      scale: 4,
+                      scale: 5,
                     )),
               ),
             ),
