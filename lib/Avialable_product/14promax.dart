@@ -18,12 +18,12 @@ class _Iphone_14State extends State<Iphone_14> {
       child: Stack(
         children: [
           Container(
-            height: 800,
+            height: 1800,
             alignment: Alignment.bottomRight,
             color: Color(0xff123456),
           ),
           Container(
-            height: 700,
+            height: 760,
             width: 5000,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -34,7 +34,7 @@ class _Iphone_14State extends State<Iphone_14> {
                   Color.fromARGB(172, 122, 183, 183)
                 ], begin: Alignment.centerRight, end: Alignment.centerLeft)),
             child: Padding(
-              padding: const EdgeInsets.only(top: 450),
+              padding: const EdgeInsets.only(top: 480),
               child: Column(
                 children: [
                   SizedBox(
