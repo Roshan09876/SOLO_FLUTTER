@@ -103,7 +103,7 @@ class _SignUpState extends State<SignUp> {
             Form(
               key: _form,
               child: Container(
-                height: 510,
+                height: 540,
                 margin: EdgeInsets.only(left: 30, top: 180, bottom: 390),
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -252,12 +252,15 @@ class _SignUpState extends State<SignUp> {
                         height: 10,
                       ),
                       ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(255, 74, 188, 213),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18))),
                         onPressed: () {},
                         child: Container(
                           height: 40,
                           width: 250,
                           decoration: BoxDecoration(
-                              // border: Border.all(width: 1, color: Colors.black),
                               borderRadius: BorderRadius.circular(12)),
                           child: Row(
                             children: [
