@@ -248,6 +248,32 @@ class _SignUpState extends State<SignUp> {
                               fontWeight: FontWeight.bold, fontSize: 20),
                         ),
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Container(
+                          height: 40,
+                          width: 250,
+                          decoration: BoxDecoration(
+                              // border: Border.all(width: 1, color: Colors.black),
+                              borderRadius: BorderRadius.circular(12)),
+                          child: Row(
+                            children: [
+                              Image.network(
+                                  "https://play-lh.googleusercontent.com/RZ5luCUwc5QtJP9xDn-ZCwEutT160GVyoh5K1eu4YJ5fD7v4LP5ptVdgR9mz4Hnr7A"),
+                              SizedBox(
+                                width: 18,
+                              ),
+                              Text(
+                                "Continue with Google",
+                                style: TextStyle(fontSize: 18),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             minimumSize: Size(280, 32),
