@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:online_mobile/pages/Phone_sign.dart';
+import 'package:online_mobile/pages/home.dart';
 import 'package:online_mobile/pages/login.dart';
 
 class SignUp extends StatefulWidget {
@@ -84,7 +87,12 @@ class _SignUpState extends State<SignUp> {
 
   // ignore: unused_element
   _handleGoogleBtnClick() {
-    _signInWithGoogle().then((value) => null);
+    _signInWithGoogle().then((user) {
+      log('\nUser: ${user.user} ');
+      log('\nUserAdditionalInfo: ${user.additionalUserInfo} ');
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => HomePage()));
+    });
   }
 
   Future<UserCredential> _signInWithGoogle() async {
