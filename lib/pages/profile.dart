@@ -36,7 +36,7 @@ class _wowState extends State<wow> {
           color: Color(0xff123456),
         ),
         Container(
-          height: 710,
+          height: 740,
           width: 600,
           decoration: BoxDecoration(
               color: Colors.white,
@@ -44,7 +44,7 @@ class _wowState extends State<wow> {
                   bottomLeft: Radius.circular(0),
                   bottomRight: Radius.circular(40))),
           child: Padding(
-            padding: const EdgeInsets.only(top: 450.0),
+            padding: const EdgeInsets.only(top: 480.0),
             child: Column(children: [
               Text(
                 "User Id:- $uid",
@@ -61,14 +61,14 @@ class _wowState extends State<wow> {
                 child: Row(
                   children: [
                     Text(
-                      "Email:-  $email",
+                      "Email:- ",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                       ),
                     ),
                     Text(
-                      "$email",
+                      "    $email",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -81,7 +81,13 @@ class _wowState extends State<wow> {
                 height: 8,
               ),
               user != null && user!.emailVerified
-                  ? Text("Account Verified")
+                  ? Text(
+                      "Account Verified",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
+                    )
                   : TextButton(
                       onPressed: (() => {verifyEmail()}),
                       child: Text(
@@ -184,7 +190,7 @@ class _wowState extends State<wow> {
         ),
         Positioned(
           top: 60,
-          left: 200,
+          left: 220,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: CircleAvatar(
@@ -194,12 +200,12 @@ class _wowState extends State<wow> {
           ),
         ),
         Positioned(
-            top: 720,
+            top: 760,
             left: 270,
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.all(10),
-                    minimumSize: Size(120, 40),
+                    minimumSize: Size(120, 50),
                     backgroundColor: Colors.red,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
