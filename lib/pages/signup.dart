@@ -85,7 +85,7 @@ class _SignUpState extends State<SignUp> {
 
   // }
 
-  // ignore: unused_element
+  // ignore: unused_elementa
   _handleGoogleBtnClick() {
     _signInWithGoogle().then((user) {
       log('\nUser: ${user.user} ');
