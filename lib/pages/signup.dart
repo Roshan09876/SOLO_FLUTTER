@@ -81,9 +81,7 @@ class _SignUpState extends State<SignUp> {
     }
   }
 
-  // void _loginWithFacebook() async{
-
-  // }
+  
 
   // ignore: unused_elementa
   _handleGoogleBtnClick() {

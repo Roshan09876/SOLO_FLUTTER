@@ -96,7 +96,8 @@ class _wowState extends State<wow> {
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
-                      )),
+                      )
+                      ),
               SizedBox(
                 height: 8,
               ),
