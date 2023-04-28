@@ -44,7 +44,7 @@ class CartProvider with ChangeNotifier {
 
   void removeTotalPrice(double productPrice) {
     _totalPrice = _totalPrice - productPrice;
-    // _totalPrice = 0;
+    _totalPrice = 0;
     _setPrefItems();
     notifyListeners();
   }

@@ -37,7 +37,7 @@ class _AppleState extends State<Apple> {
       child: Builder(builder: (BuildContext context) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: login(),
+          home: HomePage(),   
           themeMode: ThemeMode.light,
           theme: MyTheme.lightTheme(context),
           darkTheme: MyTheme.darkTheme(context),
